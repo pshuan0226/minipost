@@ -1,0 +1,7 @@
+<h1>Minipost</h1>
+
+<% @posts.each do |post|%>
+    <%= post.content%><br>
+    <%= post.created_at%><br>
+<% end %>
+<%= link_to 'New Post', '/posts/new' %>
