@@ -1,13 +1,11 @@
 <b>Title: <%= @post.title %></b><br>
 <%= @post.content %><br>
-<%= @post.user.name%><br>
 <hr>
 
 <b>Comments: </b><br>
 <% @post.comments.each do |comment| %>
     <%= comment.created_at %>
-    <%= comment.content%><br>
-    <!-- By: <%= comment.user.name%> -->
+    <b><%= comment.content%></b><br>
 <% end %>
 <hr>
 Leave a comment: <br>
