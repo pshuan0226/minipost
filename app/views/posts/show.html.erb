@@ -1,0 +1,19 @@
+<b>Title: <%= @post.title %></b><br>
+<%= @post.content %><br>
+<%= @post.user.name%><br>
+<hr>
+
+<b>Comments: </b><br>
+<% @post.comments.each do |comment| %>
+    <%= comment.created_at %>
+    <%= comment.content%><br>
+    <!-- By: <%= comment.user.name%> -->
+<% end %>
+<hr>
+Leave a comment: <br>
+<%= form_for([@post, @comment]) do |f|%>
+    <%= f.text_area :content%>
+    <%= f.submit 'Create Comment'%>
+<% end %>
+
+<%= link_to 'Back to Posts', posts_path %>

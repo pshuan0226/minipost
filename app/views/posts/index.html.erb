@@ -1,7 +1,12 @@
 <h1>Minipost</h1>
+<hr>
 
-<% @posts.each do |post|%>
-    <%= post.content%><br>
-    <%= post.created_at%><br>
-<% end %>
+<div class="table">
+    <% @posts.each do |post|%>
+        <b>Title: <%= post.title%></b>
+        <%= post.created_at%><br>
+        <%= link_to 'Show Post', post_path(post)%>
+        <hr>
+    <% end %>
+</div>
 <%= link_to 'New Post', '/posts/new' %>

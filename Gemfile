@@ -5,8 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'bcrypt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'bootstrap-sass'
 gem 'rails', '~> 5.0.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -38,6 +39,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry'
+  gem 'awesome_print'
 end
 
 group :development do
